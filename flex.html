@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , inital-scale=" 1" />
+    <title>
+     Flex Box Property
+    </title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .container__item {
+            width: 90%;
+            background: #f08282;
+            height: 85px;
+            margin: 0.2rem auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container__item:last-child {
+            margin-top: 2rem;
+        }
+
+        .order--1 {
+            order: -1;
+        }
+
+        .order--2 {
+            order: 2;
+        }
+
+        @media screen and (min-width: 1199px) {
+            .container {
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #f08282;
+                margin: 2rem auto;
+
+            }
+
+            .container__item {
+                width: 100%;
+                margin: 1rem;
+                background: #0e5551;
+                text-align: center;
+            }
+
+            .order--1 {
+                order: 3;
+            }
+
+            .order--2 {
+                order: -1;
+            }
+
+            .container__item:last-child {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__item order--2">
+
+            List 1
+
+        </div>
+        <div class="container__item ">
+
+            List 2
+
+        </div>
+        <div class="container__item order--1">
+
+            List 3
+
+        </div>
+    </div>
+
+</body>
+
+</html>

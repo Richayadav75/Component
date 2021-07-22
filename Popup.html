@@ -1,0 +1,119 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , inital-scale=" 1" />
+    <title>
+        Demo
+    </title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .pop-up-wrapper::before {
+            position: fixed;
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow-y: auto;
+            background: linear-gradient(147deg, rgb(0 36 34 / 89%) 0%, rgba(11, 130, 133, 0.8) 62%, rgba(0, 212, 255, 0.8) 100%);
+        }
+
+        .container {
+            background-color: #fff;
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+        }
+
+        .pop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pop-header :nth-last-child(1) {
+            padding: 0.50rem 0.75rem;
+            margin: 0.25rem 0.25rem 0rem 0rem;
+            border-radius: 7px;
+            border: 1px solid #000;
+
+        }
+
+        .pop-header>h1 {
+            margin: 0.25rem 0rem 0rem 0.25rem;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="pop-up-wrapper hide">
+        <div class="container">
+            <div>
+                <div class="pop-header ">
+                    <h1>Hello</h1>
+                    <button id="cancel" class="cancel-btn">X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="list">
+        <li> List 1</li>
+        <li> List 2 </li>
+        <li> List 3</li>
+        <li> List 4</li>
+        <li> List 5</li>
+        <li> List 4</li>
+        <li> list 5
+            <ul>
+                <li>List a</li>
+                <li>List b</li>
+                <li>List c</li>
+            </ul>
+        </li>
+        <li> list 5
+            <ul>
+                <li>List a</li>
+                <li>List b</li>
+                <li>List c</li>
+            </ul>
+        </li>
+    </ul>
+    <button class="btn">
+        ok
+    </button>
+    <div>
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $(".pop-up-wrapper").toggle("show");
+            $("body").css("overflow", "hidden");
+        });
+    });
+</script>
+
+</html>

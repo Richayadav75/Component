@@ -1,0 +1,61 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , inital-scale=" 1" />
+    <title>
+        Demo
+    </title>
+    <style>
+        ul li{
+            color: #000;
+        }
+        .list > li{
+            color: red;
+        }
+        .list li:nth-last-child(2){
+        color: blue;
+        }
+        ul + li{
+            color:darkblue;
+        }
+        ul li :nth-last-of-type(2){
+            background-color: darkblue;
+        }
+    </style>
+</head> 
+
+<body>
+    <ul class="list">
+        <li> List 1</li>
+        <li> List 2 </li>
+        <li> List 3</li>
+        <li> List 4</li>
+        <li> List 5</li>
+        <li>
+            <ul>
+                <li>
+                    List 6
+                </li>
+                <li>
+                    List 7
+                </li> <li>
+                    List 8
+                </li> <li>
+                    List 9
+                </li> <li>
+                    List 10
+                </li> <li>
+                    List 11
+                </li>
+            </ul>
+        </li>
+        
+    </ul>
+    <div>
+    </div>
+
+</body>
+
+</html>
